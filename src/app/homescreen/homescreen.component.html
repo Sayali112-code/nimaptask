@@ -1,0 +1,283 @@
+<p>homescreen works!</p>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo" style="background-color: white;"><a style="color: black;" href="index.html">DEMOAPP</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
+                    <li><a class="nav-link scrollto" href="#about">ABOUT US</a></li>
+                    <li><a class="nav-link scrollto" href="#services">JOBS</a></li>
+                    <li><a class="nav-link scrollto " href="#portfolio">CLIENTS</a></li>
+                    <li><a class="nav-link scrollto" href="#team">EMPLOYERS</a></li>
+                    <li><a href="blog.html">CONTACT US </a></li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+    </header>
+    <section id="hero">
+        <div class="hero-container">
+            <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzERXGkbKbw7wARnY0v3RxRRbhuB5uctxpHQ&usqp=CAU);">
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2 class="animate__animated animate__fadeInDown" style="margin: 8px 261px 2px -107px ;">I'm looking for...</h2>
+                                <form class="form-inline">
+
+                                    <div class="form-group mx-sm-3 mb-2" style="width: 600px; margin: 0px 0px 0px -110px;">
+
+                                        <input type="job description" class="form-control" style="margin: 15px 0px 0px -93px;" id="inputPassword2" placeholder="Enter a job description">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mb-2" style="margin: -71px -549px 2px 96px;">Search</button>
+                                </form>
+                                <div class="checkbox" style="margin: -18px 165px 20px -288px;">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1" style="color:white">Full time</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1" style="color:white">Part time/Casual/Freelance</label>
+                                </div>
+                                <div class="form-group">
+                                    <select type="location" class="form-control" style="width: 186px;
+                                    margin: -43px 6px 8px 334px;
+                                    padding: 2px;" id="inputPassword2" placeholder="Select your location">
+                                      <option>Select your location</option>
+                                      <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                  </select>
+                                </div>
+
+                                <div>
+                                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto" style="background-color:blue; margin: 109px -26px -10px -42px;" data-bs-toggle="modal" data-bs-target="#myModal">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Register</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="modal-body">
+
+                        <section class="h-100">
+                            <div class="container h-100">
+                                <div class="row d-flex justify-content-center align-items-center h-100">
+                                    <div class="col">
+                                        <div class=" card-registration my-4">
+                                            <form [formGroup]="userForm" (ngSubmit)="postUserDetails()">
+                                                <div class="row g-0">
+                                                    <div class="col-xl-3 d-none d-xl-block" style="margin: -20px 10px 10px 10px; ">
+
+                                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98Oi6CXr1139k_J8vCLu4Pqe7M2iBjbhvnQ&usqp=CAU" alt="Sample photo" class="img-fluid" style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                                                        <br>
+                                                        <br>
+
+                                                        <input type="text " id="projectinput1 " class="form-control image" name="image" formControlName="image" placeholder="Upload your photo" value><br>
+
+                                                    </div>
+
+                                                    <div class="col-xl-6" style="width: 550px; margin:  -340px 0px 0px 200px ">
+                                                        <div class="card-body p-md-5 text-black">
+
+
+                                                            <div class="row">
+                                                                <div class="col-md-6 mb-4">
+                                                                    <div class="form-outline">
+                                                                        <input type="text" class="form-control" formControlName="fname" style="height: 50px" id=" inputPassword2 " placeholder="First name ">
+                                                                        <small class="text-danger">Only alphabetic charecters(20 charecters)</small>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-4 ">
+                                                                    <div class="form-outline ">
+                                                                        <input type="text " class="form-control" style="height: 50px" class="form-control" formControlName="lname" style="height: 50px" id="inputPassword2 " placeholder="Last name ">
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                            <div class="form-outline mb-4 ">
+                                                                <input type="text " class="form-control" formControlName="email" style="height: 50px" id="inputPassword2 " placeholder="Email ">
+
+                                                            </div>
+
+                                                            <div class="form-outline mb-4 ">
+                                                                <input type="text " class="form-control" formControlName="phone" style="height: 50px" id="inputPassword2 " placeholder="(541)754 3010 ">
+
+                                                            </div>
+
+                                                            <div class="form-outline mb-3">
+                                                                Age &nbsp;&nbsp;&nbsp;
+                                                                <input type="range" min="1" max="100" value="50" class="slider" style="width: 400px ;
+                                                            margin: 0px 0px 0px 39px" id="myRange" formControlName="age">
+
+                                                            </div>
+
+                                                            <div class="form-outline mb-4 ">
+                                                                <select type="State" class="form-control" formControlName="state" style="height: 50px; width: 450px;" id="inputPassword2" placeholder="Select your location" class="select">
+                                                              <option>State</option>
+                                                              <option>Maharastra</option>
+                                                            <option>Gujrat</option>
+                                                            <option>Karnataka</option>
+                                                            <option>Tamilnadu</option>
+                                                            <option>Panjab</option>
+                                                          </select>
+                                                            </div>
+
+                                                            <div class="form-outline mb-4 ">
+                                                                <select type="State" class="form-control" formControlName="country" style="height: 50px; width: 450px;" id="inputPassword2" placeholder="Select your location" class="select">
+                                                              <option>Country</option>
+                                                              <option>India</option>
+                                                            <option>Caneda</option>
+                                                            <option>Itli</option>
+                                                            <option>Amerika</option>
+                                                            <option>Dubai</option>
+                                                          </select>
+                                                            </div>
+
+                                                            <div class="form-outline mb-4 ">
+                                                                <input type="text " class="form-control" formControlName="address" style="height: 50px" id="inputPassword2 " placeholder="Address">
+
+                                                            </div>
+                                                            <div class="form-outline mb-4">
+                                                                <input type="text" class="form-control" formControlName="tags" style="height: 50px;" formControlName="hobies" id="your-name" placeholder="tags">
+                                                            </div>
+                                                            <div class="mb-3 form-check">
+                                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                                <label class="form-check-label" for="exampleCheck1">Subscribe to newsletter</label>
+                                                            </div>
+
+                                                            <!-- Modal footer -->
+                                                            <div class="modal-footer">
+                                                                <button type="button " class="btn btn-light btn-lg ">Cancel</button>
+                                                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section id="about " class="about ">
+        <div class="container ">
+
+            <div class="row content ">
+                <div class="col-lg-12 " style="text-align:center ">
+
+                    <h2>We're leders in</h2>
+                    <h3>Creative Digital Recruitment</h3>
+                    <hr style="width:120px;color:blue;margin:19px 0px 28px 500px; height:5px; ">
+                    <h4>Bassed in Surry Hills the Creative hub of Sydney we are surrounded by creativity and that reflects on the type of job we recruit for</h4>
+                </div>
+            </div>
+            <button type="button " class="btn btn-outline-info " style="margin: 9px 0px 25px 400px ; ">FIND OUT MORE ABOUT US!</button>
+
+
+            <footer id="footer ">
+                <div class="footer-top ">
+                    <div class="container " style="background: black; height: 300px;">
+
+                        <div class="row ">
+
+
+                            <div class=" mb-4 footer-newsletter " style="text-align:center; color: white; margin: 90px 0px 0px 0px;">
+
+
+
+                                <p>Subscribe to our Job Seeker Mailing List</p>
+                                <form action=" " method="post " style="width:250px;margin: auto; ">
+                                    <div class="input-group " style="width:128% ">
+                                        <input type="email " name="email "><span class="input-group-text " id="basic-addon1 ">@</span>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+
+
+        </div>
+    </section>
+
+    <div class="col-auto " style="margin: -38px 17px 0px 148px; width: 191px; ">
+
+        <div class="input-group mb-2 ">
+
+            <div class="input-group-text ">@</div>
+
+            <input type="text " class="form-control " id="inlineFormInputGroup ">
+        </div>
+    </div>
+    <div class="container " style="margin: -6px 0px 0px 140px; font-size: 11px; font-weight: inherit; ">
+
+        <p>Copyright & 2014 Two Bytes Consulting Terms & Condistion </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>

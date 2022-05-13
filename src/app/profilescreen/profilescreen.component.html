@@ -1,0 +1,146 @@
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center" style="background-color:cornflowerblue;">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo" style="background-color: white;"><a style="color: black;" href="index.html">DEMOAPP</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
+                    <li><a class="nav-link scrollto" href="#about">ABOUT US</a></li>
+                    <li><a class="nav-link scrollto" href="#services">JOBS</a></li>
+                    <li><a class="nav-link scrollto " href="#portfolio">CLIENTS</a></li>
+                    <li><a class="nav-link scrollto" href="#team">EMPLOYERS</a></li>
+                    <li><a href="blog.html">CONTACT US </a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section>
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card-registration my-4">
+
+                        <div class="row g-0" *ngFor="let data of UserData; index as i">
+                            <div class="col-xl-4 d-none d-xl-block">
+                                <img [src]="data.image" height="325" width="310" class="img-fluid" style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" /><br>
+                                <input type="file" id="img" name="img" accept="image/*">
+                                <div>
+
+                                    <button type="file" id="img" name="img" accept="image/*" class=" btn btn-warning ">Edit photo</button>
+                                    <button type="button" class=" btn btn-warning mx-4" data-bs-toggle="modal" data-bs-target="#myModal">Edit profile</button>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-xl-8 ">
+                                <div class="card-body p-md-5 text-black ">
+
+
+                                    <div class="row ">
+                                        <div class="col-md-6 mb-4 ">
+                                            <div class="form-outline ">
+                                                <p>I'm {{data.fname}} {{data.lname}} and I'm above {{data.age}} years and you can send your emails to {{data.email}}. I live in the state of {{data.state}}, {{data.country}}. I like to play {{data.hobies}}.
+                                                    And please send me newsletter. Please reach out to me on my phone number {{data.phone}}.</p>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <br>
+                                    <div>
+
+                                        <!-- <button type="button " class="btn btn-outline-secondary ">Cancel</button> -->
+                                        <button type="submit " class="btn btn-success mx-3 ">I Agree</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- <div *ngFor="let data of UserData">
+        <div class="row g-0">
+            <div class="col-xl-3 d-none d-xl-block" style="margin: 210px 80px 10px 150px; height: 200px; ">
+                <div class=" card-registration my-4" style="color:cornflowerblue; margin: 0px 0px 0px 0px ; height: 0px; ">
+                    <h6 style="font-size: 20px;font-weight: 100px; ">profile</h6>
+                </div>
+
+                <img src="data:image/jpeg;base64,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"
+                    alt="Sample photo" class="img-fluid" style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; height: 250px;width: 300px;" />
+                <br>
+                <br>
+
+                <div class="button">
+                    <button type="button " class="btn btn-btn-lg " style="background-color: darkgoldenrod; margin: 20px 0px 0px 20px ;">Edit Photo</button>
+                    <button type="button" class="btn btn-yellow" style="background-color:darkgoldenrod; margin: 20px 0px 0px 20px ;">Edit Profile</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row g-0" style="margin: -170px 0px 0px 600px ; width: 350px;">
+            <p>I,m {{data.fname}} {{data.lname}} and Im above {{data.age}} years and you can send your emails to {{data.email}}. i lieave in the state of {{data.state}}. I like to play {{data.tags}}. And please send newsletter. Please reach out to me on
+                my {{data.phone}}.
+            </p>
+            <button type="button " class="btn btn-light btn-lg " style="background-color: green; width:100px ;color:white; ">I Agree</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br> -->
+
+
+
+
+
+    <footer id="footer ">
+        <div class="footer-top ">
+            <div class="container " style="background: black; height: 200px; margin: 300px 0px 0px 90px;">
+
+                <div class="row ">
+
+
+                    <div class=" mb-4 footer-newsletter " style="text-align:center; color: white; margin: 100px 0px 0px 0px;">
+
+
+
+                        <p>Subscribe to our Job Seeker Mailing List</p>
+                        <form action=" " method="post " style="width:250px;margin: auto; ">
+                            <div class="input-group " style="width:128% ">
+                                <input type="email " name="email "><span class="input-group-text " id="basic-addon1 ">@</span>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+</body>
